@@ -1,13 +1,19 @@
 import React from "react";
 import ProductCard from "./ProductCard";
 
-export default function ProductsList() {
+const ProductsList = ({ data }) => {
+
   return (
     <div className="product__card-container">
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
-      <ProductCard></ProductCard>
+
+      {data.map(item => (
+              <ProductCard item={item} ></ProductCard>
+
+      ) )}
+      
+
     </div>
   );
-}
+};
+
+export default ProductsList;

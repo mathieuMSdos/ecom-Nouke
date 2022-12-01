@@ -1,20 +1,29 @@
 import React from "react";
 import productImg from "../../assets/images/arm-chair-01.jpg";
 import { Col } from "reactstrap";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
-export default function ProductCard() {
+export default function ProductCard({ item }) {
   return (
     <div className="product__item">
-      <div className="product__img">
-        <img src={productImg} alt="productImg" />
+      <div className="product__top">
+        <motion.img
+          whileHover={{ scale: 0.9 }}
+          src={item.imgUrl}
+          alt="productImg"
+        />
+        <h3 className="product__name">
+          <Link to={`/shop/${item.id}`}>{item.productName}</Link>
+        </h3>
+        <span className="product__type">{item.category}</span>
       </div>
-      <h3 className="product__name">Modern Armchair</h3>
-      <span className="product__type">Chair</span>
+
       <div className="product__card-bottom">
-        <span className="price">$299</span>
-        <span>
-          <i class="ri-add-line"></i>
-        </span>
+        <span className="price">${item.price}</span>
+        <motion.span whileTap={{ scale: 1.2 }}>
+          <i className="ri-add-line"></i>
+        </motion.span>
       </div>
     </div>
   );
