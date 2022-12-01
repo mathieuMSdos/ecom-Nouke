@@ -1,9 +1,10 @@
 import React from 'react'
 
-export default function Helmet() {
+export default function Helmet(props) {
 
-    
+document.title = "Nouke - " + props.title
+
   return (
-    <div>Helmet</div>
+    <div className='w-100' >{props.children}</div>
   )
 }

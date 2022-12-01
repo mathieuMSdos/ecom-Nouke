@@ -1,0 +1,40 @@
+.services {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  background-color: red;
+
+  .service__item {
+    width: 270px;
+    padding: 20px;
+    // background-color: $card-bg-01;
+    display: flex;
+    align-items: center;
+    column-gap: 0.7rem;
+    border-radius: 5px;
+
+    i {
+      font-size: 2.2rem;
+      background-color: $primary-color;
+      padding: 10px;
+      border-radius: 50px;
+      color: white;
+      font-weight: 400 !important ;
+      
+    }
+
+    h3 {
+      color: $primary-color;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    p {
+      font-size: 0.9rem;
+      margin-top: 5px;
+      color: #222;
+    }
+  }
+}

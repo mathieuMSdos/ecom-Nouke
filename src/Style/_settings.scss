@@ -55,4 +55,17 @@ a {
 
 section {
   padding: 60px 0px;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+
+  .section__title {
+    color: $primary-color;
+    font-weight: 600;
+    text-align: center;
+  }
 }
+
